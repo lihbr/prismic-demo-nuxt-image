@@ -1,23 +1,24 @@
 {
-	"name": "PROJECT_NAME",
-	"version": "0.0.0",
-	"description": "PROJECT_DESCRIPTION",
+	"name": "prismic-demo-nuxt-image",
+	"version": "1.0.0",
+	"description": "A demo showcasing how it is to use Nuxt Image with images coming from Prismic",
 	"private": true,
 	"license": "MIT",
 	"author": "Lucie Haberer <hello@lihbr.com> (https://lihbr.com)",
-	"scripts": {},
+	"scripts": {
+		"dev": "nuxt",
+		"build": "nuxt build",
+		"start": "nuxt start",
+		"generate": "nuxt generate"
+	},
 	"engines": {
 		"node": ">=12.0.0"
 	},
-	"husky": {
-		"hooks": {
-			"commit-msg": "commitlint --env HUSKY_GIT_PARAMS"
-		}
+	"dependencies": {
+		"core-js": "^3.12.1",
+		"nuxt": "^2.15.6"
 	},
-	"dependencies": {},
 	"devDependencies": {
-		"@commitlint/cli": "12.1.1",
-		"@commitlint/config-conventional": "12.1.1",
-		"husky": "4.3.8"
+		"@nuxtjs/prismic": "^1.3.1"
 	}
 }

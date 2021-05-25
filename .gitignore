@@ -1,5 +1,6 @@
 # custom
 dist
+.nuxt
 
 # os
 .DS_Store

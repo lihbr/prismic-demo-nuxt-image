@@ -1,0 +1,50 @@
+{
+	"Main": {
+		"title": {
+			"type": "StructuredText",
+			"config": {
+				"single": "heading1",
+				"label": "Title"
+			}
+		},
+		"menu_items": {
+			"type": "Group",
+			"config": {
+				"fields": {
+					"link": {
+						"type": "Link",
+						"config": {
+							"allowTargetBlank": true,
+							"label": "Link"
+						}
+					},
+					"label": {
+						"type": "Text",
+						"config": {
+							"label": "Label"
+						}
+					}
+				},
+				"label": "Menu Items"
+			}
+		},
+		"image_gallery": {
+			"type": "Group",
+			"config": {
+				"fields": {
+					"image": {
+						"type": "Image",
+						"config": {
+							"constraint": {
+								"width": 1200
+							},
+							"thumbnails": [],
+							"label": "Image"
+						}
+					}
+				},
+				"label": "Image Gallery"
+			}
+		}
+	}
+}
