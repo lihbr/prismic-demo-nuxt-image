@@ -4,14 +4,19 @@ export default {
 
 	// Global page headers: https://go.nuxtjs.dev/config-head
 	head: {
-		title: "tmp",
+		title: "prismic-demo-nuxt-image",
 		htmlAttrs: {
 			lang: "en"
 		},
 		meta: [
 			{ charset: "utf-8" },
 			{ name: "viewport", content: "width=device-width, initial-scale=1" },
-			{ hid: "description", name: "description", content: "" }
+			{
+				hid: "description",
+				name: "description",
+				content:
+					"A demo showcasing how it is to use Nuxt Image with images coming from Prismic"
+			}
 		],
 		link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }]
 	},
