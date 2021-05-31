@@ -31,11 +31,16 @@ export default {
 	components: true,
 
 	// Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
-	buildModules: ["@nuxtjs/prismic"],
+	buildModules: ["@nuxtjs/prismic", "@nuxt/image"],
 
 	prismic: {
 		endpoint: "https://prismic-demo-nuxt-image.cdn.prismic.io/api/v2",
 		modern: true
+	},
+
+	image: {
+		provider: "prismic",
+		prismic: {}
 	},
 
 	// Modules: https://go.nuxtjs.dev/config-modules

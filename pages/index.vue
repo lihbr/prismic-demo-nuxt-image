@@ -1,7 +1,10 @@
 <template>
   <div class="container">
 		<header>
-			<h1>{{ $prismic.asText(data.title) }}</h1>
+			<div class="logo">
+				<nuxt-img v-if="data.logo.url" :src="data.logo.url" height="32"  />
+				<h1>{{ $prismic.asText(data.title) }}</h1>
+			</div>
 			<nav>
 				<ul>
 					<li v-for="item in data.menu_items" :key="item.label">
@@ -17,7 +20,7 @@
 					'col-span-2': index % 5 < 3,
 					'col-span-3': index % 5 >= 3,
 				}">
-					<prismic-image :field="item.image" />
+					<nuxt-img v-if="item.image.url" :src="item.image.url" sizes="md:50vw lg:50vw xl:50vw" />
 				</li>
 			</ul>
 		</section>
@@ -43,11 +46,12 @@ export default {
 /* Some basic CSS to style our gallery... */
 
 :root {
-	--beet: #a54a5e;
+	--navy: #54669c;
 	--slate: #6a5959;
 	--cream: #fffefe;
 }
 
+/* Base */
 html, body {
 	margin: 0;
 	padding: 0;
@@ -63,38 +67,59 @@ html, body {
 	margin: 2rem auto;
 }
 
-header {
-	margin: 2rem 0;
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
-}
-
-h1 {
-	font-size: 1.25rem;
-	font-weight: 400;
-	color: var(--beet);
-	margin: 0;
-}
-
 ul {
 	list-style-type: none;
-	margin: 0;
 	padding: 0;
+	margin: 0;
 }
 
-a {
+/* Header */
+header {
+	margin: 2rem 0;
+}
+
+header .logo {
+	display: flex;
+	align-items: center;
+	gap: .5rem;
+	margin: 0 0 1rem 0;
+}
+
+header h1 {
+	font-size: 1.25rem;
+	font-weight: 400;
+	color: var(--navy);
+}
+
+header ul {
+	margin: 0 -.5rem;
+}
+
+header a {
 	font-size: 1.25rem;
 	color: var(--slate);
 	text-decoration: none;
 	padding: .25rem .5rem;
 }
 
-a:hover {
-	background: var(--beet);
+header a:hover {
+	background: var(--navy);
 	color: var(--cream);
 }
 
+@media (min-width: 768px) {
+	header {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+
+	header .logo {
+		margin: 0
+	}
+}
+
+/* Page */
 section ul {
 	display: grid;
 	grid-template-columns: repeat(6, minmax(0, 1fr));
@@ -104,15 +129,21 @@ section ul {
 
 section img {
 	width: 100%;
-	height: 480px;
+	height: 280px;
 	object-fit: cover;
 }
 
-.col-span-2 {
+section .col-span-2 {
 	grid-column: span 2/span 2;
 }
 
-.col-span-3 {
+section .col-span-3 {
 	grid-column: span 3/span 3;
+}
+
+@media (min-width: 768px) {
+	section img {
+		height: 480px;
+	}
 }
 </style>
