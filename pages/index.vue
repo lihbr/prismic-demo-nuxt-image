@@ -2,6 +2,7 @@
   <div class="container">
 		<header>
 			<div class="logo">
+				<!-- Optimizing the Logo -->
 				<nuxt-img v-if="data.logo.url" :src="data.logo.url" height="32"  />
 				<h1>{{ $prismic.asText(data.title) }}</h1>
 			</div>
@@ -13,14 +14,14 @@
 				</ul>
 			</nav>
 		</header>
-		<!-- Interesting gallery bit starts here! -->
 		<section>
 			<ul>
 				<li v-for="(item, index) in data.image_gallery" :key="item.image.url" :class="{
 					'col-span-2': index % 5 < 3,
 					'col-span-3': index % 5 >= 3,
 				}">
-					<nuxt-img v-if="item.image.url" :src="item.image.url" sizes="md:50vw lg:50vw xl:50vw" />
+					<!-- Optimizing the Gallery -->
+					<nuxt-img v-if="item.image.url" :src="item.image.url" sizes="md:360px lg:580px xl:50vw" />
 				</li>
 			</ul>
 		</section>
