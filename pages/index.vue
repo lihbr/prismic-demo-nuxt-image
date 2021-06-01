@@ -2,6 +2,7 @@
   <div class="container">
 		<header>
 			<div class="logo">
+				<!-- Optimizing the Logo -->
 				<prismic-image :field="data.logo" height="32" />
 				<h1>{{ $prismic.asText(data.title) }}</h1>
 			</div>
@@ -13,13 +14,13 @@
 				</ul>
 			</nav>
 		</header>
-		<!-- Interesting gallery bit starts here! -->
 		<section>
 			<ul>
 				<li v-for="(item, index) in data.image_gallery" :key="item.image.url" :class="{
 					'col-span-2': index % 5 < 3,
 					'col-span-3': index % 5 >= 3,
 				}">
+					<!-- Optimizing the Gallery -->
 					<prismic-image :field="item.image" />
 				</li>
 			</ul>
