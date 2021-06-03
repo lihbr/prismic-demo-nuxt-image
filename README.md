@@ -4,7 +4,7 @@ This simple demo is meant to showcase how it is to get use Nuxt Image with image
 
 - [✨ &nbsp;Try Prismic](https://prismic.io/pricing?utm_campaign=devexp&utm_source=github&utm_medium=demonuxtimage)
   <!-- TODO: Updated link -->
-- [📖 &nbsp;Related Blog Post](https://prismic.io/blog?utm_campaign=devexp&utm_source=github&utm_medium=demonuxtimage)
+- [📖 &nbsp;Related Blog Post](https://prismic.io/blog/nuxt-image-is-out-so-is-its-prismic-integration?utm_campaign=devexp&utm_source=github&utm_medium=demonuxtimage)
 - [📚 &nbsp;Prismic Nuxt documentation](https://prismic.io/docs/technologies/nuxtjs?utm_campaign=devexp&utm_source=github&utm_medium=demonuxtimage)
 - [🖼 &nbsp;Try Nuxt Image documentation](https://image.nuxtjs.org)
 - [💚 &nbsp;Prismic Nuxt Module](https://prismic.nuxtjs.org)
